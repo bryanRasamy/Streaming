@@ -1,0 +1,20 @@
+Streaming/
+├── common/                  # Code partagé (utilitaires)
+│   └── ProtocolConfig.java  # Paramètres communs (Port, Qualité, Résolution)
+│
+├── sender/                  # Serveur
+│   ├── MainSender.java      # Point d'entrée
+│   ├── ScreenCapturer.java  # Gestion et capture de l'écran
+│   ├── ImageEncoder.java    # Compression, selecteur de qualite
+│   └── StreamServer.java    # Gestion des Sockets (Envoi des données), frame-skip
+│
+└── receiver/                # Client
+    ├── MainReceiver.java    # Point d'entrée
+    ├── StreamClient.java    # Gestion des Sockets (Réception des données)
+    ├── ImageDecoder.java    # Décompression 
+    └── DisplayWindow.java   # Interface Swing pour l'affichage
+    
+    
+    
+    
+Capture d'ecran -> Compression -> envoi -> recevoir -> decompression -> affichage
