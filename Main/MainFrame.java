@@ -16,13 +16,7 @@ public class MainFrame extends JFrame {
         VideoPanel videoPanel = new VideoPanel();
         UserListPanel userListPanel = new UserListPanel();
 
-        add(videoPanel, BorderLayout.CENTER);
-        add(userListPanel, BorderLayout.EAST);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new MainFrame().setVisible(true);
-        });
+        MainPanel mainPanel = new MainPanel(this);
+        add(mainPanel, BorderLayout.CENTER);
     }
 }

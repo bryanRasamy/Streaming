@@ -2,15 +2,14 @@ package protocol;
 
 public class ProtocolConfig {
     
-    /*RESEAU*/
+    /*RESEAU*/ 
     public static final int SERVER_PORT = 4018; //Port du serveur
-    public static final String SERVER_HOST = "localhost"; // IP du serveur
-    public static final int MAX_PACKET_SIZE = 65000; // Taille max UDP
+    public static final String SERVER_HOST = "127.0.0.1"; // IP du serveur
     
     /*CAPTURE D'ECRAN*/
     public static final int SCREEN_WIDTH = 1280;  //1280x720 px
     public static final int SCREEN_HEIGHT = 720;
-    public static final int TARGET_FPS = 30; //FPS
+    public static final int TARGET_FPS = 20; //FPS
     public static final int FRAME_DELAY_MS = 1000 / TARGET_FPS; // image par seconde
     
     /*COMPRESSION*/
@@ -22,9 +21,8 @@ public class ProtocolConfig {
     public static final int SOCKET_TIMEOUT_MS = 5000; // Timeout pour les opérations réseau
     
     /*PROTOCOLE*/
-    // Header de packet pour identifier les frames
-    public static final byte[] FRAME_HEADER = "FRAME".getBytes();
-    public static final int HEADER_SIZE = FRAME_HEADER.length + 8; // Header + taille frame (long)
+    public static final int TCP_SEND_BUFFER_SIZE = 64 * 1024;
+    public static final int TCP_RECEIVE_BUFFER_SIZE = 64 * 1024;
     
     /* Calcule le délai entre frames en nanosecondes (pour précision)*/
     public static long getFrameDelayNanos() {
