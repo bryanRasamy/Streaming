@@ -84,9 +84,7 @@ public class UserListPanel extends JPanel {
         updateClientList();
     }
     
-    /**
-     * Met à jour la liste des clients depuis le StreamServer
-     */
+    /* Met à jour la liste des clients depuis le StreamServer*/
     public void updateClientList() {
         if (mainSender == null || mainSender.getServer() == null) {
             clientListModel.clear();

@@ -24,19 +24,14 @@ public class Sender extends JFrame {
         add(userListPanel, BorderLayout.EAST);
     }
 
-    /**
-     * Met à jour l'affichage avec une nouvelle frame
-     * Cette méthode sera appelée depuis MainSender
-     */
+    /*Met à jour l'affichage*/
     public void updatePreview(BufferedImage frame) {
         if (videoPanel != null) {
             videoPanel.updateFrame(frame);
         }
     }
 
-    /**
-     * Réinitialise l'affichage
-     */
+    /*Réinitialise l'affichage*/
     public void resetPreview() {
         if (videoPanel != null) {
             videoPanel.reset();

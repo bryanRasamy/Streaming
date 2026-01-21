@@ -3,4 +3,4 @@
 	at receiver.StreamClient.lambda$start$0(StreamClient.java:97)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 	
--Reorganiser le code pour qu'il soit plus facile a lire;
+-(ok) Reorganiser le code pour qu'il soit plus facile a lire;
